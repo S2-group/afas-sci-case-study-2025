@@ -1,0 +1,16 @@
+InstanceName,InstanceType
+Clstr003,Standard_E16ads_v5
+Clstr004,Standard_E16ads_v5
+Dbg002,Standard_E16ads_v5
+Clstr009,Standard_E8ads_v5
+Clstr008,Standard_E4ads_v5
+Elastic,Standard_D16ads_v5
+Logging,Standard_D8ads_v5
+proxy,Standard_F2s_v2
+SvcProxy,Standard_F2s_v2
+AFASSERVICESPOOL001,GP_Gen5_24
+NEXTGP,GP_Gen5_4
+NEXTTENANTPOOL,GP_Gen5_18
+SERVER002POOL,GP_Gen5_18
+SERVER003POOL,GP_Gen5_18
+DEBUG,GP_Gen5_18
