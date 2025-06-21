@@ -19,3 +19,6 @@ baseline_calculation/*.yaml
 baseline_calculation/*.yml
 
 !baseline_calculation/manifest.yml
+
+controlled_experiments/results_data
+controlled_experiments/figures
