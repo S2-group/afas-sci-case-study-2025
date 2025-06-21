@@ -1,0 +1,80 @@
+description,startTime,endTime,duration,status
+Aanmaken aanmaken met gebruik van de KvK koppeling in een geconverteerde omgeving - Mantel Utrecht B.V.,2025-05-13 15:41:20,2025-05-13 15:47:25,364615,Succeeded
+Instellen variabelen administratie urls na aanmaken adminstratie,2025-05-13 15:47:25,2025-05-13 15:47:29,3771,Succeeded
+Instellen variabelen administratie urls 3,2025-05-13 15:47:30,2025-05-13 15:47:31,781,Succeeded
+Instellen variabelen,2025-05-13 15:47:31,2025-05-13 15:47:32,544,Succeeded
+Instellen variabelen administratie urls 1,2025-05-13 15:47:33,2025-05-13 15:47:37,4186,Succeeded
+Aanmaken nieuwe auditfile op basis van boekjaar in ICT B.V.,2025-05-13 15:47:37,2025-05-13 15:49:34,116423,Succeeded
+Aanmaken nieuwe auditfile op basis van periode in ICT B.V.,2025-05-13 15:49:34,2025-05-13 15:49:57,22646,Succeeded
+Importeren Import definities part 7,2025-05-13 15:49:59,2025-05-13 15:50:28,29418,Succeeded
+Importeren Import definities part 6,2025-05-13 15:50:29,2025-05-13 15:50:58,28339,Succeeded
+Importeren Import definities part 5,2025-05-13 15:50:59,2025-05-13 15:51:27,27909,Succeeded
+Importeren Import definities part 4,2025-05-13 15:51:28,2025-05-13 15:52:48,80527,Succeeded
+Importeren Import definities part 3,2025-05-13 15:52:50,2025-05-13 15:53:25,35326,Succeeded
+Importeren Import definities part 2,2025-05-13 15:53:26,2025-05-13 15:53:54,27671,Succeeded
+Importeren Import definities part 1,2025-05-13 15:53:55,2025-05-13 15:54:31,36264,Succeeded
+Import volledige e-inkoopfactuur,2025-05-13 15:54:33,2025-05-13 15:55:46,73044,Succeeded
+Import onvolledige e-inkoopfactuur,2025-05-13 15:55:46,2025-05-13 15:56:01,14565,Succeeded
+Grootboekrekening wijzigen,2025-05-13 15:56:02,2025-05-13 15:56:24,22522,Succeeded
+Grootboekrekening kopiëren,2025-05-13 15:56:25,2025-05-13 15:56:39,13738,Succeeded
+Controle op conversie van geblokkeerde grootboekrekening - Nummer mag niet leeg zijn,2025-05-13 15:56:39,2025-05-13 15:56:49,9731,Succeeded
+Verkoopregels activering aan ict b.v.,2025-05-13 15:56:50,2025-05-13 15:57:09,19023,Succeeded
+Activering verkoopregels aan in import b.v.,2025-05-13 15:57:10,2025-05-13 15:58:05,54623,Succeeded
+Verkoopproduct voor gebruik forfatair / Speciaal tarief toevoegen,2025-05-13 15:58:06,2025-05-13 15:58:56,49870,Succeeded
+Activering inschakelen voor verkoop op rekening met forfatair / Speciaal btw-tarief,2025-05-13 15:58:56,2025-05-13 15:59:12,16297,Succeeded
+Voorbereiding - Verkoop op rekening met forfatair / Speciaal btw-tarief,2025-05-13 15:59:13,2025-05-13 15:59:50,37497,Succeeded
+Controle van fiscale plan bij vaste activa. Restwaarde moet aangevinkt zijn.,2025-05-13 15:59:52,2025-05-13 16:01:34,102184,Succeeded
+inrichten van betalingskorting op de inkoopfactuur - crediteur niveau,2025-05-13 16:01:35,2025-05-13 16:01:51,15463,Succeeded
+Aanmaken Rabobank rekening bij Holding t.b.v. inlezen Rabobank Payments Insight bestand.,2025-05-13 16:01:52,2025-05-13 16:02:18,26321,Succeeded
+Aanmaken ondernemer in Internet,2025-05-13 16:02:19,2025-05-13 16:02:37,17164,Succeeded
+Nieuwe ING bank/spaarrekening NL05INGB6289099205 toevoegen,2025-05-13 16:02:38,2025-05-13 16:03:45,67004,Succeeded
+Dubbele inkoopfactuur 1 aanmaken,2025-05-13 16:03:46,2025-05-13 16:04:18,32260,Succeeded
+Aanmaken vast activa in ICT B.V. (testen POA 293743),2025-05-13 16:04:19,2025-05-13 16:04:39,19937,Succeeded
+Afschrijvingen triggeren ICT B.V.,2025-05-13 16:04:40,2025-05-13 16:04:50,10014,Succeeded
+Aanmaken vaste activa - Consultancy B.V.,2025-05-13 16:04:51,2025-05-13 16:05:10,19047,Succeeded
+Afschrijvingen triggeren,2025-05-13 16:05:10,2025-05-13 16:05:19,8959,Succeeded
+Incassomachtigingen toevoegen in ICT B.V.,2025-05-13 16:05:20,2025-05-13 16:05:49,28822,Succeeded
+Aanmaken verkoopfactuur met betaalwijze Incasso tbv controlelijst betalingen onderweg,2025-05-13 16:05:49,2025-05-13 16:06:45,55902,Succeeded
+Betaling doen in Holding B.V.,2025-05-13 16:06:47,2025-05-13 16:08:13,86600,Succeeded
+Controle op de betaling doen (betaalbestand controleren van Holding B.V.),2025-05-13 16:08:14,2025-05-13 16:08:23,9463,Succeeded
+Voorbereiding - Bankmutatie negatief overige uitgave met sneltoetsen toevoegen,2025-05-13 16:08:25,2025-05-13 16:08:34,9500,Succeeded
+Match op zoekwaarde (Uitgave),2025-05-13 16:08:35,2025-05-13 16:08:51,16318,Succeeded
+Match op zoekwaarde (Ontvangst),2025-05-13 16:08:53,2025-05-13 16:09:06,13185,Succeeded
+Match op zoekwaarde incl. btw (Uitgave),2025-05-13 16:09:07,2025-05-13 16:09:24,17326,Succeeded
+Match op zoekwaarde incl. btw (Ontvangst),2025-05-13 16:09:26,2025-05-13 16:09:49,23732,Succeeded
+Afletterregel VPB (betalingskenmerk belastingdienst),2025-05-13 16:09:51,2025-05-13 16:10:24,33237,Succeeded
+Afletterregel OB (betalingskenmerk belastingdienst),2025-05-13 16:10:25,2025-05-13 16:10:37,12069,Succeeded
+Controle afletterregel OB (betalingskenmerk belastingdienst),2025-05-13 16:10:37,2025-05-13 16:10:48,11256,Succeeded
+Afletterregel overboeking naar/overboeking van,2025-05-13 16:10:50,2025-05-13 16:12:13,83161,Succeeded
+Afletterregel Motorrijtuigenbelasting (betalingskenmerk belastingdienst),2025-05-13 16:12:14,2025-05-13 16:12:23,8628,Succeeded
+Afletterregel loonheffing naheffing (betalingskenmerk belastingdienst) niet afletteren,2025-05-13 16:12:24,2025-05-13 16:12:38,14396,Succeeded
+Afletterregel loonheffing naheffing (betalingskenmerk belastingdienst),2025-05-13 16:12:40,2025-05-13 16:12:50,9907,Succeeded
+Afletterregel loonheffing (betalingskenmerk belastingdienst),2025-05-13 16:12:51,2025-05-13 16:13:03,12595,Succeeded
+Afletterregel Loonheffing november 2023,2025-05-13 16:13:04,2025-05-13 16:13:15,10500,Succeeded
+Afletterregel kas (Uitgave),2025-05-13 16:13:16,2025-05-13 16:13:35,18713,Succeeded
+Afletterregel kas (Ontvangst),2025-05-13 16:13:36,2025-05-13 16:13:55,19104,Succeeded
+Afletterregel IB (betalingskenmerk belastingdienst),2025-05-13 16:13:56,2025-05-13 16:14:23,26700,Succeeded
+Aanmaken afletterregel bank op deel van omschrijving en tegenrekening,2025-05-13 16:14:24,2025-05-13 16:14:35,10634,Succeeded
+Vooruitontvangst via memoriaal,2025-05-13 16:14:37,2025-05-13 16:16:45,128494,Succeeded
+Vooruitbetaling via memoriaal,2025-05-13 16:16:47,2025-05-13 16:17:53,66741,Succeeded
+Openstaande post (crediteur) volledig boeken op betalingsverschillen,2025-05-13 16:17:55,2025-05-13 16:18:42,47657,Succeeded
+Openstaande post crediteur boeken op twee grootboekrekeningen,2025-05-13 16:18:44,2025-05-13 16:19:38,54435,Succeeded
+Openstaande posten TG 6,2025-05-13 16:19:39,2025-05-13 16:23:11,211862,Succeeded
+Openstaande posten TG 4,2025-05-13 16:23:13,2025-05-13 16:36:05,772756,Succeeded
+Vaste boeking niet in balans foutmelding,2025-05-13 16:36:07,2025-05-13 16:36:23,16286,Succeeded
+Vaste boeking aanmaken,2025-05-13 16:36:25,2025-05-13 16:36:45,20579,Succeeded
+Vaste boeking wijzigen,2025-05-13 16:36:45,2025-05-13 16:37:15,29175,Succeeded
+Vaste boeking multiselect,2025-05-13 16:37:15,2025-05-13 16:37:49,33928,Succeeded
+Vaste boeking verwijderen,2025-05-13 16:37:49,2025-05-13 16:38:04,15303,Succeeded
+Nieuwe ING bank/spaarrekening NL44INGB6296399693 toevoegen,2025-05-13 16:38:06,2025-05-13 16:38:43,37107,Succeeded
+Positief boeken van bankrekening naar spaarrekening,2025-05-13 16:38:43,2025-05-13 16:39:02,19002,Succeeded
+Negatief boeken van de bankrekening naar de spaarrekening,2025-05-13 16:39:02,2025-05-13 16:39:23,20274,Succeeded
+Positieve rente boeken op de spaarrekening NL44INGB6296399693,2025-05-13 16:39:23,2025-05-13 16:39:46,23045,Succeeded
+Negatieve rente boeken op de spaarrekening NL44INGB6296399693,2025-05-13 16:39:46,2025-05-13 16:40:16,29558,Succeeded
+Controle bij de bankrekening op saldo.,2025-05-13 16:40:16,2025-05-13 16:41:00,43959,Succeeded
+Positieve rente boeken op de spaarrekening NL05INGB6289099205,2025-05-13 16:41:01,2025-05-13 16:41:11,9672,Succeeded
+Negatieve rente boeken op de spaarrekening NL05INGB6289099205,2025-05-13 16:41:12,2025-05-13 16:41:22,9799,Succeeded
+Aanmaken VF met betaalwijze cc,2025-05-13 16:41:23,2025-05-13 16:41:53,30002,Succeeded
+Bankmutatie voor de verkoopfactuur met betaling via cc,2025-05-13 16:41:54,2025-05-13 16:42:22,28078,Succeeded
+Bankmutatie afletteren voor de verkoopfactuur met betaling via cc,2025-05-13 16:42:22,2025-05-13 16:53:05,643341,Succeeded
+Afletteren positieve en negatieve openstaande post,2025-05-13 16:53:07,2025-05-13 17:06:08,781234,Succeeded

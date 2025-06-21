@@ -1,0 +1,247 @@
+All output folders cleaned
+
+> @afas/features@1.41.0 sandboxsuite
+> call sandboxsuite.bat
+
+
+administrator@TESTINGVM C:\anta\features>for /F "delims=" %i in ('git rev-parse --abbrev-ref HEAD') do set checkedoutbranch=%i 
+
+administrator@TESTINGVM C:\anta\features>set checkedoutbranch=release/5.1 
+
+administrator@TESTINGVM C:\anta\features>for /F "delims=" %i in ('npm view node_modules\@afas\test version') do set runnerversion=%i 
+
+administrator@TESTINGVM C:\anta\features>set runnerversion=5.0.55 
+
+administrator@TESTINGVM C:\anta\features>afastest -c ./configs/sandbox.json -s ./suites/sandbox.json -b release/5.1 -v 5.0.55 
+Post run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Error during WebSocket usage of TestRunner: Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl
+Put run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.Put run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.Put run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.....................................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+...Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+...................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+...................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.Put run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................................................................................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.........................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.........................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+......................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+...............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+......Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.....Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..............................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+...........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.....................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.......Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.....................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.......Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.........................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.....................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+...........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.......Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.......................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+....................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.Put run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.......................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..........FR.................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..........FR...................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+................................................................F-------------Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.......................................................................................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+....................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..............................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.......................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+...................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.........................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+............Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+..................Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.........................FR........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+........................................................FR.........Put scenario error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Put feature error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+.Put run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+
+
+Gefaald:
+
+0) Functionaliteit: Openstaande posten TG 6
+   ✔ ik navigeer naar url "$ictbv"
+   ✔ ik een nieuwe "Verkoopfactuur" toevoeg
+   ✔ ik vul "Klant" met "Couro Lederwaren B.V."
+   ✔ ik vul "Factuurdatum" met "06-04-2023"
+   ✔ ik open geavanceerd zoeken in kolom "Artikel/dienst" van regel 1
+   ✔ ik filter op
+   ✔ ik selecteer de regels 1 en 2
+   ✔ ik klik op de actie "Selecteer"
+   ✔ ik wijzig regel 1 naar
+   ✔ ik wijzig regel 2 naar
+   ✔ ik vul "Referentie klant" met "TG6"
+   ✔ ik open tabblad "Betaling"
+   ✔ ik vul "Betaalwijze" met "Op rekening"
+   ✔ ik sla op
+   ✔ ik navigeer naar "Verkoopfacturen"
+   ✔ ik filter op
+   ✔ ik open de eerste regel
+   ✔ is "Totaalbedrag" in de staart "€ 4.466,72"
+   ✔ is "Btw" in de staart "€ 938,01"
+   ✔ is "Bedrag inclusief btw" in de staart "€ 5.404,73"
+   ✔ is de actie "Verzenden" wel beschikbaar of wacht maximaal 30000 milliseconden
+   ✔ ik klik op de actie "Verzenden"
+   ✔ ik navigeer naar "Verkoopfacturen"
+   ✔ ik filter op
+   ✔ ik open de eerste regel
+   ✔ ik open de inhoudsopgave "Betaling"
+   ✔ moet in "Openstaande post" de volgende regel aanwezig zijn
+   ✔ ik open de inhoudsopgave "Journaalposten"
+   ✔ moet de volgende regel aanwezig zijn
+   ✔ ik navigeer naar "Openstaande posten (debiteur)"
+   ✔ ik filter op
+   ✔ moet de volgende regel aanwezig zijn
+   ✔ ik een nieuwe "Bankmutatie" toevoeg
+   ✔ ik vul "Datum boeking" met "15-04-2023"
+   ✔ ik vul "Eigen bankrekening" met "NL18ABNA0412595265"
+   ✔ ik vul "Bedrag" met "4.000,25"
+   ✔ ik vul "Tegenrekening" met "NL49INGB0007748856"
+   ✔ ik vul "Referentie" met "TG6"
+   ✔ ik sla op
+   ✔ ik navigeer naar "Afletteringen"
+   ✔ ik wissel naar "Regels voor bankmutatie tegen inkomende betaling afletteringen"
+   ✔ ik filter op
+   ✔ ik selecteer de regel 1
+   ✔ ik klik in het admin menu op "Start automatisch afletteren"
+   ✔ ik navigeer naar "Openstaande posten (debiteur)"
+   ✔ ik filter op
+   ✔ moet de volgende regel aanwezig zijn of wacht maximaal 30000 milliseconden
+   ✔ ik navigeer naar "Openstaande posten (debiteur)"
+   ✔ ik filter op
+   ✔ moet de volgende regel aanwezig zijn of wacht maximaal 30000 milliseconden
+   ✔ ik navigeer naar "Openstaande posten (debiteur)"
+   ✔ ik filter op
+   ✔ moet de volgende regel aanwezig zijn
+   ✔ ik navigeer naar "=Journaalposten"
+   ✔ ik selecteer boekjaar "2023"
+   ✔ ik wissel naar "Journaalposten (logging)"
+   ✔ ik filter op
+   ✔ moet de volgende regel aanwezig zijn
+   ✔ ik navigeer naar "Verkoopfacturen"
+   ✔ ik filter op
+   ✔ ik de regel open met "Referentie klant" "TG6"
+   ✔ ik wijzig
+   ✔ ik vul "Referentie klant" met "TG6A"
+   ✘ ik sla op
+Fout: Verwacht dat 'Opslaan knop in Wijzigpagina in NEXT App' met selector '.AppLayout >> .ListPage,:not(.OverlayBubble-content) > .DetailPage[data-state="initialized"],.Popup-content > div,.WizardPage,.NewImportPage,.MultiStep,.BatchLayout,.ReconcilePage,.MailboxPage,.ScanAssistPage,.PortalLayout,.StartMenuLayout,.PictureSearch >> nth=-1 >> internal:testid=[data-testid="save"s]' verdwijnt, maar blijft bestaan.
+Error: Fout: Verwacht dat 'Opslaan knop in Wijzigpagina in NEXT App' met selector '.AppLayout >> .ListPage,:not(.OverlayBubble-content) > .DetailPage[data-state="initialized"],.Popup-content > div,.WizardPage,.NewImportPage,.MultiStep,.BatchLayout,.ReconcilePage,.MailboxPage,.ScanAssistPage,.PortalLayout,.StartMenuLayout,.PictureSearch >> nth=-1 >> internal:testid=[data-testid="save"s]' verdwijnt, maar blijft bestaan.
+    at Object.notExists (C:\anta\features\node_modules\@afas\test-runner\out\drivers\testElement.js:230:23)
+    at async waitForSaveOrNotification (C:\anta\features\node_modules\@afas\test-runner\out\drivers\pages\detailPage.js:29:17)
+    at async Timeout.checkCondition [as _onTimeout] (C:\anta\features\node_modules\@afas\test-runner\out\test.js:98:28)
+   - ik navigeer naar "Verkoopfacturen"
+   - ik filter op
+   - ik de regel open met "Referentie klant" "TG6A"
+   - ik open de inhoudsopgave "Betaling"
+   - moet in "Openstaande post" de volgende regel aanwezig zijn
+   - ik navigeer naar "=Journaalposten"
+   - ik selecteer boekjaar "2023"
+   - ik wissel naar "Journaalposten (logging)"
+   - ik filter op
+   - moet de volgende regel aanwezig zijn
+   - ik navigeer naar "Openstaande posten (debiteur)"
+   - ik filter op
+   - moet de volgende regel aanwezig zijn
+Put run error: Error: Fout: Command was niet succesvol verlopen: 'Error: getaddrinfo ENOTFOUND aitaf01.ad.afas.nl'
+Stop event received by worker
+Successfully wrote data to out\log\scenario_summary.csv

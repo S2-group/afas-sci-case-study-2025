@@ -1,0 +1,194 @@
+name: afas-sb-sci-calculation
+description: SCI calculation for AFAS SB
+tags:
+
+initialize:
+  plugins:
+    data-import:
+      method: CSVImport
+      path: 'builtin'
+      config:
+        filepath: 'azure_data/standardized/resampled_utilization.csv'
+        output: '*'
+    
+    interpolate:
+      method: Interpolation
+      path: "builtin"
+      config:
+        method: linear
+        x: [0, 10, 50, 100]
+        y: [0.12, 0.32, 0.75, 1.02]
+        input-parameter: "cpu/utilization"
+        output-parameter: "cpu-factor"
+    
+    cpu-factor-to-wattage:
+      method: Multiply
+      path: builtin
+      config:
+        input-parameters: ["cpu-factor", "cpu/thermal-design-power"]
+        output-parameter: "cpu-wattage"
+    
+    wattage-times-duration:
+      method: Multiply
+      path: builtin
+      config:
+        input-parameters: ["cpu-wattage", "duration"]
+        output-parameter: "cpu-wattage-times-duration"
+    
+    wattage-to-energy-kwh:
+      method: Divide
+      path: "builtin"
+      config:
+        numerator: cpu-wattage-times-duration
+        denominator: 3600000
+        output: cpu-energy-raw
+    
+    calculate-vcpu-ratio:
+      method: Divide
+      path: "builtin"
+      config:
+        numerator: resources-total
+        denominator: resources-reserved
+        output: vcpu-ratio
+    
+    correct-cpu-energy-for-vcpu-ratio:
+      method: Divide
+      path: "builtin"
+      config:
+        numerator: cpu-energy-raw
+        denominator: vcpu-ratio
+        output: cpu/energy
+    
+    memory-power:
+      method: Coefficient
+      path: "builtin"
+      config:
+        input-parameter: "memory"
+        coefficient: 0.000392
+        output-parameter: "memory/watts"
+
+    memory-watts-to-energy:
+      method: Multiply
+      path: "builtin"
+      config:
+        input-parameters: ["memory/watts", "duration"]
+        output-parameter: "memory/energy-joules"
+
+    memory-joules-to-kwh:
+      method: Divide
+      path: "builtin"
+      config:
+        numerator: "memory/energy-joules"
+        denominator: 3600
+        output: "memory/energy"
+    
+    sum-energy-components:
+      path: "builtin"
+      method: Sum
+      config:
+        input-parameters:
+          - cpu/energy
+          - memory/energy
+        output-parameter: energy
+    
+    convert-kg-to-g:
+      method: Coefficient
+      path: "builtin"
+      config:
+        input-parameter: "baseline-emissions"
+        coefficient: 1000.0
+        output-parameter: "baseline-emissions-g"
+    
+    calculate-time-factor:
+      method: Divide
+      path: "builtin"
+      config:
+        numerator: duration
+        denominator: device/expected-lifespan
+        output: time-factor
+    
+    calculate-resource-factor:
+      method: Divide
+      path: "builtin"
+      config:
+        numerator: resources-reserved
+        denominator: resources-total
+        output: resource-factor
+    
+    time-scale-embodied:
+      method: Multiply
+      path: "builtin"
+      config:
+        input-parameters: ["baseline-emissions-g", "time-factor"]
+        output-parameter: "time-scaled-embodied"
+    
+    resource-scale-embodied:
+      method: Multiply
+      path: "builtin"
+      config:
+        input-parameters: ["time-scaled-embodied", "resource-factor"]
+        output-parameter: "embodied-carbon"
+    
+    operational-carbon:
+      method: Multiply
+      path: builtin
+      config:
+        input-parameters: ["energy", "grid/carbon-intensity"]
+        output-parameter: "carbon-operational"
+    
+    sum-carbon:
+      path: "builtin"
+      method: Sum
+      config:
+        input-parameters:
+          - carbon-operational
+          - embodied-carbon
+        output-parameter: carbon
+    
+    duration-to-hours:
+      method: Divide
+      path: "builtin"
+      config:
+        numerator: duration
+        denominator: 3600
+        output: duration-hours
+    
+    sci:
+      path: "builtin"
+      method: Sci
+      config:
+        functional-unit: "duration-hours"
+
+tree:
+  children:
+    child-1:
+      pipeline:
+        observe:
+          - data-import
+        regroup:
+          - cloud/instance-type
+        compute:
+          - interpolate
+          - cpu-factor-to-wattage
+          - wattage-times-duration
+          - wattage-to-energy-kwh
+          - calculate-vcpu-ratio
+          - correct-cpu-energy-for-vcpu-ratio
+          - memory-power
+          - memory-watts-to-energy
+          - memory-joules-to-kwh
+          - sum-energy-components
+          - convert-kg-to-g
+          - calculate-time-factor
+          - calculate-resource-factor
+          - time-scale-embodied
+          - resource-scale-embodied
+          - operational-carbon
+          - sum-carbon
+          - duration-to-hours
+          - sci
+      defaults:
+        grid/carbon-intensity: 355 # From ElectricityMaps, location: NL, month: February
+        device/expected-lifespan: 126144000 # 60 * 60 * 24 * 7 * 52 * 4 seconds (4 years)
+        component: 1
+        cloud/region: westeurope

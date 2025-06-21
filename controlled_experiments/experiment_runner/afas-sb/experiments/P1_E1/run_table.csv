@@ -1,0 +1,11 @@
+__run_id,__done,app_version,test_duration,test_success_rate,scenario_count,powerjoular_power,powerjoular_util,vm_avg_cpu_percent,vm_avg_memory_mb,vm_avg_thread_count,vm_total_io_read_count,vm_total_io_write_count
+run_0_repetition_0,DONE,current,5048.0,100.0,79,41.802,22.941,182.51,30556.6,37.09,6271255,6606099
+run_0_repetition_1,DONE,current,5016.0,100.0,79,41.714,23.429,184.57,30556.41,29.7,6205835,6539387
+run_0_repetition_2,DONE,current,5057.0,100.0,79,42.731,26.621,178.37,30555.87,24.24,6290619,6619030
+run_0_repetition_3,DONE,current,5045.0,100.0,79,41.597,22.492,185.95,30555.94,26.85,6242957,6578942
+run_0_repetition_4,DONE,current,5116.0,98.7,79,41.588,34.989,185.33,30556.21,28.19,6318083,6652277
+run_0_repetition_5,DONE,current,5058.0,100.0,79,41.729,30.731,186.79,30555.29,24.72,6248040,6578770
+run_0_repetition_6,DONE,current,5075.0,100.0,79,42.229,25.561,184.34,30556.07,25.67,6278746,6604945
+run_0_repetition_7,DONE,current,5000.0,100.0,79,41.722,22.525,185.24,30555.93,28.81,6198891,6527400
+run_0_repetition_8,DONE,current,6210.0,98.7,79,41.229,20.887,157.6,30556.01,23.24,7453200,7772587
+run_0_repetition_9,DONE,current,5062.0,100.0,79,41.747,25.471,181.02,30555.91,29.98,6244349,6560186

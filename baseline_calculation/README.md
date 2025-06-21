@@ -1,65 +1,124 @@
-# Baseline Calculation - Carbon Emissions of AFAS SB
+# Baseline Calculation
 
-For the **Baseline Calculation phase** the goal is to calculate the baseline carbon emissions of AFAS SB by analyzing collected Azure cloud metrics over a week-long period (Monday, February 3 – Sunday, February 9, 2025). Since Azure does not provide energy consumption metrics, the CPU and memory data will be used to estimate energy consumption using [**Performance Engineering**](https://sci-guide.greensoftware.foundation/E/PerformanceEngineeringBased/). This data will then be used in the SCI formula to calculate a baseline SCI score. 
+## Architecture
+
+The pipeline consists of four main stages:
+
+1. **Data Preprocessing**: Raw Azure metrics extraction and standardization
+2. **Resource Utilization Processing**: CPU and memory usage calculation
+3. **Data Standardization**: Consistent temporal resampling and interpolation
+4. **SCI Calculation**: SCI score calculation
 
 ## Data Sources
 
-The dataset consists of CPU and memory usage metrics collected from Azure Virtual Machine Scale Sets, individual Virtual Machines, and SQL Elastic Pools. These resources are part of the AFAS SB cloud infrastructure, deployed across multiple resource groups:
+### Azure Monitor Metrics (CPU and memory utilization)
 
-- Virtual Machine Scale Sets (VMSS) from Service Fabric clusters:
-    - Cluster003-RG, Cluster004-RG, Cluster008-RG, Cluster009-RG, and DebugCluster002-RG (Production & Development)
-    - Used for processing application workloads.
+- **VM Scale Sets**: 30 instances
+- **Virtual Machines**: 4 instances
+- **SQL Elastic Pools**: 12 instances
 
-- Standalone Virtual Machines:
-    - LoggingService-RG (Logging Services), Proxy001-RG & ServicesProxy-RG (Proxy Services)
-    - Used for proxy, logging, and management operations.
+Data location: `azure_data/raw_data/`
+- `vm_scale_sets_cpu.csv`
+- `vm_scale_sets_memory.csv`
+- `vms_cpu.csv`
+- `vms_memory.csv`
+- `sql_elastic_pools_cpu.csv`
+- `sql_elastic_pools_memory.csv`
 
-- SQL Elastic Pools:
-    - SqlServer001-RG, SqlServer002-RG, SqlServer003-RG, SqlServerDebug001-RG
-    - Used for database management and query execution.
+### Static Configuration Data
 
-### Raw Data (`azure_data/raw_data/`)
-- Contains unprocessed CSV files with CPU and memory usage metrics collected from Azure.
-- These datasets span one full week (Feb 3 - Feb 9, 2025).
+- `azure_data/static_data/instance_assignments.csv`: Instance name to type mappings
+- `azure_data/static_data/instance_types_specs.csv`: Hardware specifications and embodied carbon data
 
-### Processed Data (`azure_data/processed_data/`)
-- Processed CSV files with cleaned, formatted, and useful CPU and memory data.
-- Includes:
-  - **Memory Used (Bytes)**
-  - **Memory Utilization (%)**
-  - **CPU Utilization (%)**
+## Pipeline Components
 
-### Static Data (`azure_data/static_data/`)
-- Stores instance type specifications and assignments.
-- Used to map virtual machines to their instance types and retrieve memory capacities.
-- This data is taken from:
-    - [CloudPrice](https://cloudprice.net/).
-    - [Microsoft's documentation](https://learn.microsoft.com/en-us/azure/azure-sql/database/resource-limits-vcore-elastic-pools?view=azuresql).
+### 1. CPU Processing (`cpu.py`)
 
-## Scripts
+Processes raw CPU utilization metrics from Azure Monitor:
 
-### `memory.py`
-- Processes memory utilization and usage for VMs and SQL Elastic Pools using the instance specifications from the static data CSV files.
-- Formats the data.
+**Input**: Raw Azure CPU metrics with metadata header
+**Output**: CSV files with consistent timestamp format
 
-### `cpu.py`
-- Processes CPU utilization for VMs and SQL Elastic Pools.
-- Formats the data.
+### 2. Memory Processing (`memory.py`)
 
-## Methodology
+Calculates memory utilization from Azure Monitor memory metrics:
 
-- To estimate energy consumption [**Performance Engineering**](https://sci-guide.greensoftware.foundation/E/PerformanceEngineeringBased/) will be used.
-- The CPU and memory usage data will be combined with hardware specifications such as the **TDP** (Thermal Design Power) to calculate power consumption using the following formula:
+**Key Functions**:
+- `load_memory_specs()`: Loads hardware specifications
+- `calculate_memory_usage()`: Processes VM memory data
+- `process_sql_utilization()`: Processes SQL Elastic Pool data
 
-$$
-P_{\text{kWh}} = \frac{c \cdot P_c + P_r + g \cdot P_g}{1000}
-$$
+### 3. Data Standardization (`resample_data.py`)
 
-where:
-- $c$ = the number of CPU cores
-- $P_c$ = the power consumption of the CPU (W)
-- $P_g$ = the power consumption of the GPU (W)
-- $g$ = the number of memory sticks
-- $P_r$ = the power consumption of the memory (W)
+Resamples all metrics to consistent 5-minute intervals:
 
-This formula provides the estimated power consumption in kilowatt-hours (kWh) by taking into account CPU, GPU, and memory power usage. Because the instance types included in the metrics do not have a GPU, $P_g$ is assumed to be 0. 
+**Output**: `azure_data/standardized/resampled_utilization.csv`
+
+### 4. SCI Calculation (`manifest.yml`, Impact Framework)
+
+Implements the complete SCI specification using the Impact Framework:
+
+#### Energy Calculation
+```yaml
+interpolate:
+  method: linear
+  x: [0, 10, 50, 100]           # CPU utilization percentiles
+  y: [0.12, 0.32, 0.75, 1.02]   # Power curve coefficients
+```
+
+#### Key Calculations
+- **CPU Energy**: `E_cpu = CPU_factor × TDP × duration / 3600000` (kWh)
+- **Memory Energy**: `E_memory = memory_GB × 0.000392 × duration / 3600` (kWh)
+- **Total Energy**: `E_total = E_cpu + E_memory`
+
+#### Embodied Emissions
+```yaml
+embodied-carbon: TE × (TiR/EL) × (RR/ToR)
+```
+Where:
+- `TE`: Total embodied emissions from Cloud Carbon Footprint coefficients
+- `TiR`: Time reserved (measurement duration)
+- `EL`: Expected lifespan (4 years)
+- `RR`: Resources reserved (vCPUs allocated)
+- `ToR`: Total resources (total server cores)
+
+#### SCI Score Calculation
+```yaml
+sci: (operational_emissions + embodied_emissions) / functional_unit
+```
+Functional unit: duration in hours (instance-hours)
+
+## Execution
+
+### Complete Pipeline
+```bash
+python run_sci_pipeline.py
+```
+
+## Configuration Parameters
+
+### Grid Carbon Intensity
+- **Value**: 355 gCO2eq/kWh
+- **Source**: ElectricityMaps for The Netherlands, February 2025
+- **Location**: `manifest.yml` defaults section
+
+### Hardware Lifecycle
+- **Expected Lifespan**: 4 years (126,144,000 seconds)
+- **Embodied Emissions**: Cloud Carbon Footprint coefficients
+
+### Memory Power Model
+- **Coefficient**: 0.000392 watts per GB
+- **Source**: Cloud Carbon Footprint methodology
+- **Model**: Linear power consumption assumption
+
+## Output Files
+
+### Primary Results
+- `sci_outputs.csv`: Complete SCI calculation results per timestamp
+- `sci_outputs_summary.csv`: Aggregated results per instance
+- `sci_results.yaml`: Raw Impact Framework output
+
+### Analysis Artifacts
+- `baseline.ipynb`: Complete analysis notebook that generates:
+  - `baseline_results/`: Statistical analysis outputs
+  - `figures/`: Plots
