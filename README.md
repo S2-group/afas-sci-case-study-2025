@@ -107,6 +107,15 @@ The controlled experiments consist of three phases:
 
 Each experimental condition includes 10 repetitions to account for measurement variability.
 
+## Cloud Carbon Footprint Modifications
+
+9 instance specifications were added to the [ccf-coefficients repository](https://github.com/cloud-carbon-footprint/ccf-coefficients) `data/azure-instances.csv` file to calculate total embodied emissions for:
+
+- Azure instances (Dads v5, Eads v5, GP_Gen5 series)
+- Green Lab server (MOX1 series)
+
+**Modified file**: `ccf-coefficients/azure-instances.csv`
+
 ## Statistical Analysis
 
 All statistical analyses are implemented in Jupyter notebooks within the respective directories:
