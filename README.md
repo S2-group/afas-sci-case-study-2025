@@ -86,7 +86,7 @@ This processes Azure monitoring data and calculates production SCI scores.
 - CPU and memory utilization data collected via Azure Monitor
 
 ### Experimental Data
-- 140 experimental runs
+- 150 experimental runs
 - Process-level energy measurements
 - System resource utilization metrics
 - Functional test execution results
