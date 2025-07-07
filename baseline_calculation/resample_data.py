@@ -5,9 +5,6 @@ import os
 def resample_data(input_directory="azure_data/processed_data", 
                   output_file="azure_data/standardized/resampled_utilization.csv",
                   resample_interval="5min"):
-    """
-    Resample all processed utilization data to a consistent time interval.
-    """
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     
     instance_specs = pd.read_csv("azure_data/static_data/instance_types_specs.csv")

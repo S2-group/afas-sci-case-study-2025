@@ -3,7 +3,6 @@ import subprocess
 import time
 
 def run_command(command, description, exit_on_error=True):
-    """Run a shell command and print its status"""
     print(f"\n=== {description} ===")
     start_time = time.time()
     result = subprocess.run(command, shell=True, text=True)
@@ -19,7 +18,6 @@ def run_command(command, description, exit_on_error=True):
         return False
 
 def main():
-    """Run the complete SCI calculation pipeline"""
     print("Starting SCI calculation pipeline...")
     
     os.makedirs("azure_data/processed_data", exist_ok=True)
