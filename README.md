@@ -1,6 +1,6 @@
-# Empirical Assessment of Carbon Reduction Strategies in Enterprise Software Systems
+# Empirical Assessment of Carbon Reduction Strategies in Enterprise Software Applications
 
-This repository contains the implementation and data analysis for the thesis "Empirical Assessment of Carbon Reduction Strategies in Enterprise Software Systems".
+This repository contains the implementation and data analysis for the thesis "Empirical Assessment of Carbon Reduction Strategies in Enterprise Software Applications".
 
 ## Research Overview
 
@@ -10,7 +10,7 @@ This study investigates carbon emission optimization strategies for AFAS SB, a c
 
 1. **RQ1**: What is the baseline rate of carbon emissions of AFAS SB in production?
 2. **RQ2**: How do application-level configuration settings affect the rate of carbon emissions of AFAS SB?
-3. **RQ3**: To what extent can the rate of carbon emissions of AFAS SB be reduced by combining optimal application-level configurations while maintaining system performance and functionality?
+3. **RQ3**: To what extent can the rate of carbon emissions of AFAS SB be reduced by _combining_ application-level configurations while maintaining system performance and functionality?
 
 ## Repository Structure
 
